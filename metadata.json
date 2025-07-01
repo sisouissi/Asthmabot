@@ -1,0 +1,5 @@
+{
+  "name": "DocuBot Asthme",
+  "description": "An AI-powered medical assistant that answers questions based on the official Tunisian guide for asthma management (INEAS). This tool is for informational purposes and does not replace professional medical advice.",
+  "requestFramePermissions": []
+}
