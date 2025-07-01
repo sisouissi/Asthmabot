@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DocuBot Asthme | INEAS</title>
+    <title>AsthmaBot | INEAS</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,14 @@
       }
       ::-webkit-scrollbar-thumb:hover {
         background: rgba(0, 0, 0, 0.4);
+      }
+      /* Animation for chat bubbles */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .fade-in {
+        animation: fadeIn 0.4s ease-out forwards;
       }
     </style>
   <script type="importmap">

@@ -11,7 +11,7 @@ const App: React.FC = () => {
     {
       id: 'initial-1',
       role: 'model',
-      text: 'Bonjour ! Je suis DocuBot, votre assistant médical spécialisé dans le guide de l\'INEAS sur la prise en charge de l’asthme. Comment puis-je vous aider ?',
+      text: 'Bonjour ! Je suis AsthmaBot, votre assistant médical expert du guide de l\'INEAS sur la prise en charge de l’asthme. Comment puis-je vous aider ?',
     },
     {
       id: 'initial-2',
@@ -87,7 +87,7 @@ const App: React.FC = () => {
             <AsthmaIcon className="h-8 w-8 text-blue-700" />
           </div>
           <div>
-            <h1 className="text-xl font-bold text-gray-900">DocuBot Asthme</h1>
+            <h1 className="text-xl font-bold text-gray-900">AsthmaBot</h1>
             <p className="text-sm text-gray-600">Assistant IA pour le guide de l'INEAS</p>
           </div>
         </div>
@@ -95,8 +95,8 @@ const App: React.FC = () => {
 
       <main ref={chatContainerRef} className="flex-1 overflow-y-auto p-4 md:p-6">
         <div className="max-w-4xl mx-auto space-y-8">
-          {messages.map((msg, index) => (
-            <ChatBubble key={`${msg.id}-${index}`} message={msg} />
+          {messages.map((msg) => (
+            <ChatBubble key={msg.id} message={msg} />
           ))}
           {isLoading && messages[messages.length-1].role !== 'model' && (
              <ChatBubble message={{ id: 'loading', role: 'model', text: '', isStreaming: true }} />

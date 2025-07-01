@@ -108,7 +108,7 @@ export const ChatBubble: React.FC<{ message: DisplayMessage }> = ({ message }) =
   const isUser = role === 'user';
 
   return (
-    <div className={`flex items-start gap-3.5 ${isUser ? 'flex-row-reverse' : ''}`}>
+    <div className={`flex items-start gap-3.5 ${isUser ? 'flex-row-reverse' : ''} fade-in`}>
       <div className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center shadow-sm ring-2 ring-white ${isUser ? 'bg-blue-100' : 'bg-gray-200'}`}>
         {isUser ? <UserIcon className="w-6 h-6 text-blue-600" /> : <AsthmaIcon className="w-6 h-6 text-blue-700" />}
       </div>
